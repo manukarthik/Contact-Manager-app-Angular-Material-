@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
+import { UserService } from './contactmanager/services/user.service';
+import { HttpClient,HttpClientModule } from '@angular/common/http';
 
 
 
@@ -20,10 +22,11 @@ const routes: Routes=[
   imports: [
     BrowserModule, 
     BrowserAnimationsModule,
+    HttpClientModule,
     RouterModule.forRoot(routes)
     
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
