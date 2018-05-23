@@ -34,3 +34,4 @@ export class ToolbarComponent implements OnInit {
       duration: 2000,
     });
 }
+}

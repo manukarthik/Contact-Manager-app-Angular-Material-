@@ -3,10 +3,11 @@ import { User } from '../models/user';
 import { HttpClient, HttpClientModule} from '@angular/common/http';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { Observable } from 'rxjs/Observable';
-import { resolve } from 'path';
+import { resolve } from 'q';
 
 @Injectable()
 export class UserService {
+
 
 private _users: BehaviorSubject<User[]>
 

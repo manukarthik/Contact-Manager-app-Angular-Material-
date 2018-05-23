@@ -14,8 +14,9 @@ import { SidenavComponent } from './components/sidenav/sidenav.component'
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { UserService } from './services/user.service';
 import { NewContactDialogComponent } from './components/new-contact-dialog/new-contact-dialog.component';
-
-
+import { NotesComponent } from './components/notes/notes.component';
+import { CdkTableModule } from '@angular/cdk/table';
+import { MatTableModule } from '@angular/material'
 const routes: Routes = [
   
   {
@@ -35,12 +36,15 @@ children:[
     FormsModule,
     FlexLayoutModule,
     RouterModule.forChild(routes),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CdkTableModule,
+    MatTableModule
+   
   ],
   providers:[
 UserService
   ],
-  declarations: [ContactmanagerAppComponent,ToolbarComponent,MainContentComponent, SidenavComponent, NewContactDialogComponent],
+  declarations: [ContactmanagerAppComponent,ToolbarComponent,MainContentComponent, SidenavComponent, NewContactDialogComponent, NotesComponent],
   entryComponents:[
     NewContactDialogComponent
   ]
